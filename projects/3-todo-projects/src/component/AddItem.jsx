@@ -1,6 +1,6 @@
-function Item1() {
-  let todoName = "buy milk";
-  let todoDate = "5-4-2020";
+function AddItem({todoName,todoDate}) {
+  // let todoName = "buy milk";
+  // let todoDate = "5-4-2020";
   return  <div className="row mt-5">
   <div className="col">
    {todoName}
@@ -14,4 +14,4 @@ function Item1() {
 </div>
 }
 
-export default Item1;
+export default AddItem;
