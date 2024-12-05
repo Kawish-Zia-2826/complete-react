@@ -1,12 +1,17 @@
-import AddItem from "./AddItem";
-const AddItems = () =>{
-return( <div className="items-container">
 
-  
-      
-  <AddItem todoDate={"10/10/2024"} todoName={"gilk"}/>
-  <AddItem todoDate={"10/20/2024"} todoName={"milk"}/>
+const AddItems = ({todoName,todoDate}) =>{
+return(   <div className="row mt-5">
+  <div className="col">
+   {todoName}
+  </div>
+  <div className="col">
+   {todoDate}
+  </div>
+  <div className="col">
+   <button className="btn btn-danger">delete</button>
+  </div>
 </div>
+
 
 );
 }

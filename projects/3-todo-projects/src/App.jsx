@@ -1,27 +1,28 @@
 import AddTodo from "./component/AddTodo";
 import AppName from "./component/AppName";
-
-
-// import AddItems from "./component/AddItems";  
 import './App.css'
-import AddItems from "./component/AddItems";
+import DynamicAddTodo from "./component/DynamicAddTodo";
 
 function App() {
-  const TodoItems = [{
-    name:"milk",
-    DueDate:"20/10/24"
-  },
-  {
-    name:"creamex",
-    DueDate:"20/10/24"
-  }
-]
+const todoItemsObj = [{
+  name:"milk",
+  date:"20/10/2024"
+},
+{
+  name:"creamex",
+  date:"20/10/2024"
+},
+{
+  name:"creamex",
+  date:"20/10/2024"
+}]
  
   return (
     <div className="container text-center">
       <AppName />
       <AddTodo />
-      <AddItems TodoItems={TodoItems}/>
+      <DynamicAddTodo todoitems={todoItemsObj}></DynamicAddTodo>
+    
 
       
     </div>
