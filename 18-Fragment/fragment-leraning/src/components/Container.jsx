@@ -1,8 +1,8 @@
 import style from './Container.module.css'
-const Container =(props) =>{
+const Container =({children}) =>{
 return(
 <div className={style.Container}>
- {props.children}
+ {children}
 </div>
 );
 
