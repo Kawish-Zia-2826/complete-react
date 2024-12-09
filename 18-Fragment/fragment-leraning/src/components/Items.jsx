@@ -1,6 +1,6 @@
 import styles from './Items.module.css';
 
-function Items({ Items,handle }) {
+function Items({ Items,handle  }) {
   // let { Items } = props;
 
   // const handleEvent = (item,event) => {
