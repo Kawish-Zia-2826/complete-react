@@ -5,7 +5,11 @@ let FoodItem = ({items}) => {
     
     <ul className="list-group">
       {items.map((item, index) => (
-       <Items key={index} Items={item}></Items>
+       <Items
+        key={index}
+         Items={item}
+         handle={()=> console.log(`${item}"clicked"`)}
+       ></Items>
       ))}
     </ul>
   );
