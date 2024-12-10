@@ -1,6 +1,6 @@
 import styles from './Items.module.css';
 
-function Items({ Items,handle  }) {
+function Items({ Items,bought ,handle  }) {
   // let { Items } = props;
 
   // const handleEvent = (item,event) => {
@@ -10,7 +10,7 @@ function Items({ Items,handle  }) {
   // }
 
   return (
-    <li className={`list-group-item container ${styles.bigblue}`} >
+    <li className={`list-group-item container ${styles.bigblue} ${bought && 'active'}`} >
       {Items}
       <button
         className={`btn btn-info ${styles.button}`}

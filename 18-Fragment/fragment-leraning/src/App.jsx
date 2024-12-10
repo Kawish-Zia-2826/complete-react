@@ -23,6 +23,7 @@ let [a,seta] = useState([]);
 const onkeydown = (e)=>{
   if(e.key === 'Enter'){
       let newFoodItem = e.target.value
+      e.target.value = "";
       let newItems = [...a, newFoodItem]
       seta(newItems) 
       // console.log("new foood " + newFoodItem);
