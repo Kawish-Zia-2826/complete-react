@@ -7,20 +7,30 @@ import { useState } from "react";
 function App() {
 
 // var a = []
-var a = ["daal","makhni","chini","roti","sanu"]
+// var a = []
+let [a,seta] = useState([]);
+  // "daal","makhni","chini","roti","sanu"
+
 // var b  =  : null
 // var text = "heres a text"
-let textStateArr = useState("food enterd");
-let text = textStateArr[0]
-let setText = textStateArr[1]
+// let textStateArr = useState("food enterd");
+// let text = textStateArr[0]
+// let setText = textStateArr[1]
+// let [text,setText] = useState("food enterd") 
+// console.log(`current val of text state ${text}`);
 
-console.log(`current val of text state ${text}`);
 
-
-const handleEvent = (e)=>{
+const onkeydown = (e)=>{
+  if(e.key === 'Enter'){
+      let newFoodItem = e.target.value
+      let newItems = [...a, newFoodItem]
+      seta(newItems) 
+      // console.log("new foood " + newFoodItem);
+      
+  }
   console.log(e.target.value);
-  text =e.target.value
-  setText(e.target.value)
+  // text =e.target.value
+  // setText(e.target.value)
 
   
 }
@@ -28,9 +38,9 @@ const handleEvent = (e)=>{
     <>
     <Container>
      <div>this is our list group</div>
-     <p>{text}</p>
+     
+  <FoodInput handleonKeyDown={onkeydown}></FoodInput>
   <ErrorMessage items={a}></ErrorMessage>  
-  <FoodInput handleEvent={handleEvent}></FoodInput>
   <FoodItems items={a}></FoodItems>
   
     </Container>
