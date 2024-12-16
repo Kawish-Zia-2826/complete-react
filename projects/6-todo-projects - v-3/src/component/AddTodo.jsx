@@ -1,9 +1,10 @@
 import { useState } from 'react';
+import { MdAdd } from "react-icons/md";
 import styles from './AddTodo.module.css'
 function AddTodo({onNewItem}) {
 
-const [todoName,setTodoName] = useState()
-const [todoDate,setTodoDate] = useState()
+const [todoName,setTodoName] = useState("")
+const [todoDate,setTodoDate] = useState("")
 
 const handleNameChange = (e)=>{
 setTodoName(e.target.value)
@@ -28,7 +29,7 @@ const handleDateChange = (e)=>{
   <input type="date" placeholder="enter date" value={todoDate} onChange={handleDateChange} />
   </div>
   <div className="col">
-   <button className="btn btn-success" onClick={handleAddBtnClicked}>Add</button>
+   <button className="btn btn-success" onClick={handleAddBtnClicked}><MdAdd /></button>
   </div>
 </div>
   );

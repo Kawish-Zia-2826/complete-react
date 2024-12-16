@@ -29,7 +29,10 @@ const handleNewObj=(newName,newDate)=>{
   setTodoObj(newTodoItems)
 }
 const handeDelteBtn = (todoItemName)=>{
-  console.log(`delete btn cliked on:${todoItemName}`);
+  const newTodoItems = todoItemsObj.filter(item => item.name !== todoItemName)
+    setTodoObj(newTodoItems)
+  
+  // console.log(`delete btn cliked on:${todoItemName}`);
   
 }
  
