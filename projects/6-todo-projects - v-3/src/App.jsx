@@ -22,11 +22,13 @@ function App() {
 const [todoItemsObj,setTodoObj] = useState([])
 const handleNewObj=(newName,newDate)=>{
   console.log(`new name is ${newName} and Date is ${newDate}`);
-  const newTodoItems = [...todoItemsObj,{
-     name:newName,
-  date:newDate
-  }]
-  setTodoObj(newTodoItems)
+
+  setTodoObj((current)=>[
+ ...current,{
+      name:newName,
+   date:newDate
+   }]
+  )
 }
 const handeDelteBtn = (todoItemName)=>{
   const newTodoItems = todoItemsObj.filter(item => item.name !== todoItemName)
