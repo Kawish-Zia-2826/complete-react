@@ -2,9 +2,9 @@ import AddItems from "./AddItems";
 const DynamicAddTodo = ({todoitems,onDeleteClicked})=>{
   return(
     <div className="items-container">
-      {todoitems.map((item)=>(
+      {todoitems.map((item,index)=>(
         <AddItems 
-        key={item} 
+        key={index} 
         todoDate={item.date} todoName={item.name} onDeleteClicked={onDeleteClicked}/>
       ))}
     </div>
